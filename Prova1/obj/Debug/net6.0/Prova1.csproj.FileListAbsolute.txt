@@ -31,3 +31,4 @@ C:\Users\Maria das Graças\Desktop\Vitor\Faculdade\4º Periodo\Humberto\1º Bime
 C:\Users\Maria das Graças\Desktop\Vitor\Faculdade\4º Periodo\Humberto\1º Bimestre\Prova1\Prova1\obj\Debug\net6.0\Prova1.pdb
 C:\Users\Maria das Graças\Desktop\Vitor\Faculdade\4º Periodo\Humberto\1º Bimestre\Prova1\Prova1\obj\Debug\net6.0\Prova1.genruntimeconfig.cache
 C:\Users\Maria das Graças\Desktop\Vitor\Faculdade\4º Periodo\Humberto\1º Bimestre\Prova1\Prova1\obj\Debug\net6.0\ref\Prova1.dll
+C:\Users\Maria das Graças\Desktop\Vitor\Faculdade\4º Periodo\Humberto\1º Bimestre\Prova1\Prova1\bin\Debug\net6.0\Data\Carta.json
