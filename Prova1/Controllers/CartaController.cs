@@ -18,46 +18,50 @@ namespace Prova1.Controllers
 
         #region Operaçoes arquivo
 
-        private List<RegistroCartaViewModel> LerCartaDoArquivo()
+        private List<RegistraCartaViewModel> LerCartaDoArquivo()
         {
             if (!System.IO.File.Exists(_cartacaminhoArquivo))
             {
-                return new List<RegistroCartaViewModel>();
+                return new List<RegistraCartaViewModel>();
             }
 
             string json = System.IO.File.ReadAllText(_cartacaminhoArquivo);
-            return JsonConvert.DeserializeObject<List<RegistroCartaViewModel>>(json);
+            return JsonConvert.DeserializeObject<List<RegistraCartaViewModel>>(json);
         }
 
-        private void EscreverJogosNoArquivo(List<RegistroCartaViewModel> jogos)
+        private void EscreverCartasNoArquivo(List<RegistraCartaViewModel> cartas)
         {
-            string json = JsonConvert.SerializeObject(jogos);
+            string json = JsonConvert.SerializeObject(cartas);
             System.IO.File.WriteAllText(_cartacaminhoArquivo, json);
         }
 
         #endregion
 
         #region POST
+
         [HttpPost]
-        public IActionResult Post(RegistroCartaViewModel registroCartaViewModel)
+        public IActionResult Post(RegistraCartaViewModel registraCartaViewModel)
         {
 
-            var jogosRealizaddos = LerCartaDoArquivo();
+            var CartasRealizadas = LerCartaDoArquivo();
 
-            jogosRealizaddos.Add(registroCartaViewModel);
+            CartasRealizadas.Add(registraCartaViewModel);
 
-            EscreverJogosNoArquivo(jogosRealizaddos);
+            EscreverCartasNoArquivo(CartasRealizadas);
 
-            return Ok("Jogo registrado com sucesso");
+            return Ok("Carta registrada com sucesso");
         }
+
         #endregion
 
         #region GET 
+
         [HttpGet]
         public IActionResult Get()
         {
             return Ok(LerCartaDoArquivo());
         }
+
         #endregion
     }
 }
